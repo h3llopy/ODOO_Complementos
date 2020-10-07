@@ -4,43 +4,44 @@ Este repositorio contiene modulos complementarios referentes a la localizacion d
 
 - io_share_clientes_multicompany
 
-**Descripción:*
+**Descripción:**
 
 - niq_pos_multi_barcodes       
 
-**Descripción:*
+**Descripción:**
 
 - purchase_inventory_extend    
 
-**Descripción:*
+**Descripción:**
 
 - pos_gift_card
 
-**Descripción:*
+**Descripción:**
 
 - pos_coupons                  
 
-**Descripción:*
+**Descripción:**
 
 - wk_coupons                   
 
-**Descripción:*
+**Descripción:**
 
 - pos_promotional_discounts
 
-**Descripción:*
+**Descripción:**
 
 - rest_api                     
 
-**Descripción:*
+**Descripción:**
 
 - pos_partial_payment
 
-**Descripción:*
+**Descripción:**
 
 - receive_purchase_barcode     
 
-**Descripción:*
+**Descripción:**
+
 
 
 ## Autores ✒️
