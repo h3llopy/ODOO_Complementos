@@ -43,6 +43,8 @@ Este repositorio contiene modulos complementarios referentes a la localizacion d
 **Descripción:**
 
 
+  ## Dependencias entre modulos
+  - pos_coupons y wk_coupons   
 
 ## Autores ✒️
 
