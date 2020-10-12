@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<templates id="template_custom_pos_partial_payment_extended" inherit_id="point_of_sale.template" xml:space="preserve">
+
+  
+   	<t t-extend="ClientDetails">
+		<t t-jquery=".client-details-right" t-operation="append">
+			<div class="client-detail">
+				<span class='label'>Credit Amount</span>
+				<span> <t t-esc='partner.custom_credit'/></span>
+			</div>
+		</t>        
+	</t>
+	
+	<t t-extend="ActionpadWidget">
+		<t t-jquery="t[t-if*='!widget.pos.get_client()']" t-operation="after">
+			<br/>
+			<t t-esc="(widget.pos.get_client() ? ' [Credit : ' + (Math.round(widget.pos.get_client().custom_credit * 100) / 100).toString() + ']': '')"/>
+		</t>
+	</t>
+
+	<t t-extend="PaymentScreenWidget">
+		<t t-jquery="t[t-if*='!widget.pos.get_client()']" t-operation="after">
+			<t t-esc="(widget.pos.get_client() ? ' [Credit: ' + (Math.round(widget.pos.get_client().custom_credit * 100) / 100).toString() + ']': '')"/>
+		</t>
+	</t>
+
+
+
+	<t t-extend="ClientDetails">
+		<t t-jquery=".edit-buttons" t-operation="after">
+			<div class='payment-button' style="position: absolute; right: 45px;top: 10px;">
+				<div class="button add-payment" style="background-color: #7F82AC; color: #fff; padding: 10px 10px; font-size: 20px; margin-right:40px; cursor: pointer; border-radius: 3px;">
+			  		<i class='fa fa-sign-in'/>  Pay Credit Amount
+				</div>
+			</div>
+		</t>
+  	</t>   
+  
+  	<!-- ClientListScreenWidget -->
+	<t t-extend="ClientListScreenWidget">
+		<t t-jquery="tr" t-operation="append">
+			<th>Credit Amount</th>
+		</t>
+	</t>
+
+	<!-- ClientLineWidget -->
+  	<t t-extend="ClientLine">
+		<t t-jquery="tr.client-line" t-operation="append">
+	  	<td id="bal"><t t-esc='partner.custom_credit or "N/A"' /></td>
+		</t>
+  	</t>
+	 
+	  
+	
+	 <!-- PayPartialPaymentPopupWidget -->     
+	<t t-name="PayPartialPaymentPopupWidget">
+		<div class="modal-dialog">
+			<div class="popup popup-confirm" style="height: 250px !important;">
+				<p class="title" style="background-color: rgb(110,200,155); color: #fff;">Pay Partial Payment</p>
+				<p class="body" style="color: #0075AC;"><span>Enter Your Partial Amount</span>
+				 <input id ="entered_amount" type="text" class="input-field" name="code" style="margin-top: 10px;"></input>
+				 </p>
+				<div class="footer" style="background-color: rgb(110,200,155); color: #fff;">
+					<div class="button cancel" style="background-color: #0075AC; color: #fff;">
+						Cancel 
+					</div>
+					<div class="button confirm" id="pay_partial_payment" style="background-color: #0075AC; color: #fff;">
+						Pay 
+					</div>
+				</div>
+			</div>
+		</div>
+	</t>
+
+	<t t-name="CustomErrorPopupWidget">
+		<div role="dialog" class="modal-dialog custom">
+			<div class="popup popup-error">
+				<p class="title"><t t-esc=" widget.options.title || 'Error' " /></p>
+				<p class="body"><t t-esc=" widget.options.body || '' "/></p>
+				<div class="footer">
+					<div class="button cancel">
+						Ok
+					</div>
+				</div>
+			</div>
+		</div>
+	</t>
+	
+	<t t-name="PartialPaymentReceiptWidget">
+		<div class='receipt-screen screen'>
+			<div class='screen-content'>
+				<div class='top-content'>
+					<span class='button next' style="background-color:#6EC89B; color:white">
+						Exit
+						<i class='fa fa-close' style="margin-left:5px;"></i>
+					</span>
+				</div>
+				<div class="centered-content touch-scrollable">
+					<div class="button print-product">
+						<i class='fa fa-print'></i> Print Receipt
+					</div>
+					<div class="pos-receipt-container pos-partial-receipt" style="text-align: center;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</t>
+
+	<t t-name="XMLPartialPaymentReceipt">
+		<div class="pos-sale-ticket">
+			<img style="width: 50%;display: block;margin: 0 auto;" t-att-src='widget.pos.company_logo_base64' alt="Logo"/>
+			<br/>
+			<div class="pos-receipt-contact" style="text-align: center;">
+				<t t-if='widget.pos.company.contact_address'>
+					<div><t t-esc='widget.pos.company.contact_address' /></div>
+				</t>
+				<t t-if='widget.pos.company.phone'>
+					<div>Tel:<t t-esc='widget.pos.company.phone' /></div>
+				</t>
+				<t t-if='widget.pos.company.vat'>
+					<div>VAT:<t t-esc='widget.pos.company.vat' /></div>
+				</t>
+				<t t-if='widget.pos.company.email'>
+					<div><t t-esc='widget.pos.company.email' /></div>
+				</t>
+				<t t-if='widget.pos.company.website'>
+					<div><t t-esc='widget.pos.company.website' /></div>
+				</t>
+				<div><t t-esc='date_p' /></div>
+				
+				<t t-if='widget.pos.get_cashier()'>
+					<div class='cashier'>
+						<div>--------------------------------</div>
+						<div>Served by <t t-esc='widget.pos.get_cashier().name' /></div>
+					</div>
+				</t>
+			</div>			
+			<br/>
+			<div class="pos-center-align">
+			<strong style="    font-size: 16px;">Partial Payment Detail</strong>
+			</div><br />
+			<div>
+				<table class='receipt-orderlines' style="margin:0px auto;width: 100%;">
+					<colgroup>
+						<col width='50%' />
+						<col width='50%' />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>Partner</th>
+							<td class="pos-right-align">
+								<t t-esc="partner_id.name || ''"/>
+							</td>
+						</tr>
+						<tr>
+							<th>Journal Entry</th>
+							<td class="pos-right-align">
+								<t t-esc="journal_entry || ''"/>
+							</td>
+						</tr>
+						<tr>
+							<th>Amount</th>
+							<td class="pos-right-align">
+								<t t-esc="widget.format_currency(amount)"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br/>
+			<div style="margin-top:70px;text-align: center;">
+			<p style="border-top: 2px dashed black;"></p>
+			<b><span>Signature</span></b>
+			</div>
+			<br />
+		</div>
+	</t>
+	
+	
+	</templates>

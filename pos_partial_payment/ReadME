@@ -1,0 +1,25 @@
+Version Info:
+
+12.0.0.1 :- index improve , journal field mendetory.
+12.0.0.2 :- working flow worng.
+12.0.0.3 :- index improved
+
+
+Date :- 5th Feb 2020
+version :- 12.0.0.4
+improvment :- 
+	- Remove "pay partial payment" from main screen and add new button "Pay Credit Amount" in customer view.
+	- getting error when pay credit amount from pos.
+	- installation error , pos_journal_id not null.
+
+Version 12.0.0.5 : (27/03/20)
+		- Add session name as a reference in created journal entry after partial payment done from POS.
+		- Open New receipt after partial payment done from POS.
+
+version 12.0.0.6(20th april 2020)
+	- credit limit working with multi currency .
+
+Version 12.0.0.7 : (27/03/20)
+		- Solve open error popup issue.
+		- Base code is changed for return of rpc ,so change code according latest base code.
+		- Solve warnings.

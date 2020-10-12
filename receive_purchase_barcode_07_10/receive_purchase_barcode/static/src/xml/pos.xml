@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="IncreasePriceButton">
+        <div class="control-button">
+            Increase Price
+        </div>
+    </t>
+
+    <t t-name="IncreasePricePopupWidget">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput increase_popup"
+                 style="height: 195px;width: 470px;">
+                <!--<p class="title"></p>-->
+                <div>
+                    <table id="increase_price_table" style="margin: 40px 0px 0px 40px;">
+                        <tr>
+                            <td>Apply Percentage :</td>
+                            <td>
+                                <input type="text" id="increase_percentage"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        Confirm
+                    </div>
+                    <div class="button cancel">
+                        Cancel 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>
