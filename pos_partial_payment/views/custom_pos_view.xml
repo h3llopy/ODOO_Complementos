@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_for_pos_partial_payment" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+            	<link rel="stylesheet" href="/pos_partial_payment/static/src/css/custom.css" />
+                <script type="text/javascript" src="/pos_partial_payment/static/src/js/pos_extended.js"></script>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

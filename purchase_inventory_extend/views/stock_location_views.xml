@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="view_picking_form_inherit" model="ir.ui.view">
+            <field name="name">stock.picking.form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='origin']" position="after">
+                    <div colspan="2" style="min-height: 30px;max-width: 65%;">
+                        <field name="barcode" id="barcode_field" class="barcode_field" nolabel="1" placeholder="Scan" style="max-width: 80%;"/>
+                        <button name="scan_barcode" type="object" string="Search" class="pull-right btn-primary" attrs="{'invisible':[('barcode','=',False)]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="after">
+                    <field name="product_barcode_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+
+</odoo>
