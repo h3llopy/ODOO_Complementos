@@ -42,9 +42,17 @@ Este repositorio contiene modulos complementarios referentes a la localizacion d
 
 **Descripción:**
 
+- withholding_in_pos     
+
+**Descripción:** módulo que permite solicitar los datos de la retención en el POS
+
+- pos_lot_credit_card, 
+
+**Descripción:** módulo que permite tomar los datos del lote y banco en el pos. 
 
   ## Dependencias entre modulos
   - pos_coupons y wk_coupons   
+  - niq_pos_multi_barcodes y purchase_inventory_extend
 
 ## Autores ✒️
 
