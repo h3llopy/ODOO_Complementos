@@ -64,7 +64,4 @@
 		          action="product_multi_barcode_action"
 		          sequence="30"/>
 
-
-
-
 </odoo>

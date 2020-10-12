@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+
+        <record id="view_account_journal_form_custom" model="ir.ui.view">
+            <field name="name">account.journal.form.custom</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form"/>
+            <field name="arch" type="xml">
+                <field name="default_credit_account_id" position="after">
+                    <field name="is_credit_card"/>
+                    <field name="pos_bank_id"
+                           attrs="{'invisible':[('is_credit_card' ,'!=',True)],'required':[('is_credit_card' ,'=',True)]}"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

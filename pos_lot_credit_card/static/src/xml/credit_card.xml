@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="CreditCardLotNumberDetails">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput credit_card_detail_popup" style="height:265px;width:450px;">
+                <p class="title">Credit Card Lot Number Details</p>
+                <div>
+                    <table border="0" align="center" id="credit_card_table">
+                        <tr>
+                            <td>Bank: </td>
+                            <td>
+                                <select id='select_bank_detail' style="width: 100%;padding: 5px;font-size: 16px;">
+                                    <option value="nothing">Select Bank </option>
+                                    <t t-foreach="widget.pos.credit_bank_details" t-as="credit_detail">
+                                        <option t-att-value="credit_detail.id"><t t-esc="credit_detail.bank_name" /></option>
+                                    </t>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lot Number: </td>
+                            <td>
+                                <input type="text" id="credit_lot_number" readonly="readonly"
+                                    t-att-value='widget.pos.pos_session.lot_no'/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        Confirm
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>
