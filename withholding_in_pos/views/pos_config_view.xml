@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="pos_order_inherited_form_view" model="ir.ui.view">
+        <field name="name">pos.order.inherited.view</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <notebook>
+                <page string="Withholding Details">
+                    <group>
+                        <field name="type_withholding" readonly="1"/>
+                        <field name="percentage_withholding" readonly="1"/>
+                        <field name="withholding_number" readonly="1"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

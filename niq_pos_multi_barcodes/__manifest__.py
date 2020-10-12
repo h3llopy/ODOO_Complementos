@@ -18,6 +18,7 @@
         'views/product_multi_barcode_views.xml',
         'views/product_product_views.xml',
         'views/product_template_views.xml',
+        'views/product_label_barcode.xml',
         # asset
         'views/point_of_sale_assets.xml',
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="WithholdingPopupDetails">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput withholding_popup" style="height:300px;">
+                <p class="title">Withholding Details</p>
+                <div>
+                    <table border="0" align="center" id="withholding_table">
+                        <tr>
+                            <td>Type Withholding: </td>
+                            <td>
+                                <select id='select_withholding_type' style="width: 100%;padding: 5px;font-size: 16px;">
+                                    <option value="nothing">Select Withholding </option>
+                                    <t t-foreach="widget.pos.taxes" t-as="each_tax">
+                                        <t t-if="each_tax.with_holding_sale">
+                                            <option t-att-value="each_tax.id"><t t-esc="each_tax.name" /></option>
+                                        </t>
+                                    </t>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Percentage Withholding: </td>
+                            <td>
+                                <input type="text" id="percentage_withholding" readonly="readonly" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Withholding Number: </td>
+                            <td>
+                                <input type="text" id="withholding_number" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        Confirm
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    
+</templates>

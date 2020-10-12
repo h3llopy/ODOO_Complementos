@@ -4,6 +4,8 @@
 
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError
+from odoo.addons import decimal_precision as dp
+from math import ceil
 
 class ProductProduct(models.Model):
 
@@ -14,6 +16,17 @@ class ProductProduct(models.Model):
         inverse_name="product_id",
         string="Multi Barcode"
     )
+    disc_percentage = fields.Float('For 5 or more Units Discount Percentage',default=5)
+    lst_price_disc = fields.Float(
+        'Disc Price', readonly=False,
+        digits=dp.get_precision('Product Price'))
+
+    @api.one
+    def get_discount_amount(self):
+        print("\n\n\tdusc=======",self.lst_price)
+        self.lst_price_disc = truncate((self.lst_price - ((self.lst_price * self.disc_percentage)/100)),2)
+        print("\n\n\t====",self.lst_price_disc)
+        return self.lst_price_disc
 
     @api.model
     def compute_multi_barcode_product_domain(self, args):
@@ -53,3 +66,6 @@ class ProductProduct(models.Model):
                     'Multi barcode should be unique !.'
                     'There is an same barcode on multi-barcode tab.'
                     'Please check again !')
+def truncate(n, decimals=0):
+    multiplier = 10 ** decimals
+    return int(n * multiplier) / multiplier
