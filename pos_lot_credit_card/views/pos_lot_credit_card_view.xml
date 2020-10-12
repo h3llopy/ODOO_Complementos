@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="pos_lot_credit_card_index" name="pos_lot_credit_card index" inherit_id="point_of_sale.index">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/pos_lot_credit_card/static/src/js/credit_card.js"></script>
+<!--                <link rel="stylesheet" type="text/css" href="/withholding_in_pos/static/src/css/withholding.css"/>-->
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

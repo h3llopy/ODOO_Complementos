@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_pos_order_form_inherit" model="ir.ui.view">
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_group']" position="after">
+                <field name="lot_no" readonly="1"/>
+                <field name="bank_name" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_pos_session_form_inherit" model="ir.ui.view">
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='stop_at']" position="after">
+                <field name="lot_no"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

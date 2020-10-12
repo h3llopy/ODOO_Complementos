@@ -18,7 +18,9 @@
                     </page>
                 </notebook>
             </xpath>
-
+            <xpath expr="//field[@name='lst_price']" position="after">
+                <field name="disc_percentage"/>
+            </xpath>
         </field>
     </record>
 </odoo>

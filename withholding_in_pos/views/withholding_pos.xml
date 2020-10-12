@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="withholding_in_pos_index" name="withholding_in_pos index" inherit_id="point_of_sale.index">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/withholding_in_pos/static/src/js/withholding.js"></script>
+                <link rel="stylesheet" type="text/css" href="/withholding_in_pos/static/src/css/withholding.css"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
