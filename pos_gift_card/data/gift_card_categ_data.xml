@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : <https://store.webkul.com/license.html/> -->
+<odoo>
+    <data noupdate="1">
+        <record id="wk_pos_gift_card_categ" model="pos.category">
+            <field name="name">Gift Cards</field>
+            <field name="sequence">0</field>
+            <field name="image_medium"  type="base64" file="pos_gift_card/static/description/gift_card.png"></field>
+        </record>
+    </data>
+</odoo>
