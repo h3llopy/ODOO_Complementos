@@ -12,23 +12,24 @@
                             <strong t-field="product.display_name"/>
                         </th>
                     </tr>
-                    <tr class="row text-center pull-center" style="padding-top: 0px;">
-                        <td style="height: 1.5rem;width: 60%">
-                            5 o más unidades
+                    <tr class="row text-center" style="padding-top: 0px;height: 1.5rem; !important">
+                        <td class="text-center col-6 pull-left" style="height: 1.5rem;width: 60% !important">
+                            5 o más<br/>unidades
                             <br/>
                             <t t-set="disc" t-value="product.get_discount_amount()"/>
                             <strong t-esc="product.lst_price_disc" style="font-size: 22px;"
                                     t-options="{'widget': 'monetary', 'display_currency': product.company_id.currency_id}"/>
                         </td>
-                        <td style="height: 1.5rem;width: 40%;padding-left:20px">
-                            1 - 4<br/>unidades
+                        <td class="text-center col-5 pull-right" style="height: 1.5rem;width: 40%;padding-left:20px">
+                            1 - 4<br/> unidades
                             <br/>
-                            <strong t-field="product.lst_price" style="font-size: 22px;"
+                            <strong t-field="product.inc_tax_lst_price" style="font-size: 22px;"
                                     t-options="{'widget': 'monetary', 'display_currency': product.company_id.currency_id}"/>
                         </td>
                     </tr>
                     <tr>
                         <td class="text-center align-middle" style="height: 4rem">
+                            <br/><br/><br/>
                             <t t-set="barcode_value" t-value="product.barcode"/>
                             <t t-if="not barcode_value">
                                 <t t-if="product.barcode_ids">
