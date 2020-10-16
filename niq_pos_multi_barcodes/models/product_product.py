@@ -20,12 +20,16 @@ class ProductProduct(models.Model):
     lst_price_disc = fields.Float(
         'Disc Price', readonly=False,
         digits=dp.get_precision('Product Price'))
+    inc_tax_lst_price = fields.Float(
+        'Tax Include Price', readonly=False,
+        digits=dp.get_precision('Product Price'))
 
     @api.one
     def get_discount_amount(self):
         print("\n\n\tdusc=======",self.lst_price)
-        self.lst_price_disc = truncate((self.lst_price - ((self.lst_price * self.disc_percentage)/100)),2)
-        print("\n\n\t====",self.lst_price_disc)
+        self.inc_tax_lst_price = (self.taxes_id.compute_all( self.lst_price, currency=None, quantity=1.0, product=self).get('total_included') if self.taxes_id else self.lst_price) or self.lst_price
+        self.lst_price_disc = truncate((self.inc_tax_lst_price - ((self.inc_tax_lst_price * self.disc_percentage)/100)),2)
+        print("\n\n\t====",self.inc_tax_lst_price)
         return self.lst_price_disc
 
     @api.model
