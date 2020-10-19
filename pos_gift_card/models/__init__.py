@@ -9,3 +9,4 @@
 from . import inherited_product
 from . import pos_order
 from . import inherited_voucher
+from . import account_journal
