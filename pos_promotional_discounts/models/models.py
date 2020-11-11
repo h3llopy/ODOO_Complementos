@@ -14,6 +14,8 @@ class PosConfig(models.Model):
 	promo_message_ids = fields.Many2many('pos.promotions',string="Promotions")
 	show_apply_promotion = fields.Boolean(string="Show Apply Promotion Button", help="Enable this option to Show Promotions button on POS, or the offers will be applied automatically.", default=False)
 	show_offers_in_orderline = fields.Boolean(string="Show Offers in Orderlines", help="Enable this option to Show Offers in Orderline.", default=True)
+	disable_discount_button = fields.Boolean(string="Disable Discount button in POS")
+	disable_delete_button = fields.Boolean(string="Disable Delete button in POS")
 
 class PosSession(models.Model):
 	_inherit = 'pos.session'

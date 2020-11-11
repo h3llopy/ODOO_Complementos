@@ -112,7 +112,15 @@ odoo.define('pos_gift_card.gift_card', function (require) {
         	}
         	this._super(input);
         },
-        finalize_validation: function() {
+        validate_order: function(force_validation) {
+			var self = this;
+			var order = self.pos.get_order();
+			if(self.pos.is_gift_card){
+                order.set_to_invoice(!order.is_to_invoice());
+            }
+			self._super(force_validation);
+		},
+        /*finalize_validation: function() {
             var self = this;
             var order = this.pos.get_order();
 
@@ -142,7 +150,7 @@ odoo.define('pos_gift_card.gift_card', function (require) {
                 this.gui.show_screen('receipt');
             }
 
-        },
+        },*/
     });
 
      /*var GiftRedeemPopupWidget = PopupWidget.extend({
