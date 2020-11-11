@@ -6,6 +6,33 @@ odoo.define('pos_promotional_discounts.screens', function (require) {
 	var _t = core._t;
     var QWeb = core.qweb;
 
+
+    screens.NumpadWidget.include({
+        applyAccessRights: function() {
+            var cashier = this.pos.get('cashier') || this.pos.get_cashier();
+            var has_price_control_rights = !this.pos.config.restrict_price_control || this.pos.get_cashier();
+            this.$el.find('.mode-button[data-mode="price"]')
+                .toggleClass('disabled-mode', !has_price_control_rights)
+                .prop('disabled', !has_price_control_rights);
+            if (!has_price_control_rights && this.state.get('mode')=='price'){
+                this.state.changeMode('quantity');
+            }
+            var has_discount_control_rights = !this.pos.config.disable_discount_button;
+            this.$el.find('.mode-button[data-mode="discount"]')
+                .toggleClass('disabled-mode', !has_discount_control_rights)
+                .prop('disabled', !has_discount_control_rights);
+            if (!has_discount_control_rights && this.state.get('mode')=='discount'){
+                this.state.changeMode('quantity');
+            }
+            var has_delete_control_rights = !this.pos.config.disable_delete_button;
+            this.$el.find('.input-button.numpad-backspace').prop('disabled', !has_delete_control_rights);
+            if(!has_delete_control_rights){
+                this.$el.find('.input-button.numpad-backspace').css(
+                    {'cursor': 'not-allowed','background': '#c7c7c7'});
+            }
+        },    
+    });
+
     screens.PaymentScreenWidget.include({
 		validate_order: function(force_validation) {
 			var self = this;

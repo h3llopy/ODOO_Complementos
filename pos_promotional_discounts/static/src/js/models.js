@@ -226,7 +226,7 @@ odoo.define('pos_promotional_discounts.models', function (require) {
             if(self.pos && self.pos.config && order && order.is_offer_applied){
                 offers = self.get_all_promotions(order)
                 console.log("offers",offers)
-                if (!self.is_offer_product){
+                /*if (!self.is_offer_product){
                     if(offers){
                         var product = self.product
                         var options = {}
@@ -300,6 +300,81 @@ odoo.define('pos_promotional_discounts.models', function (require) {
                                 }
                                 self.pos.gui.chrome.screens.products.order_widget.renderElement();
                             }
+                        }
+                    }
+                }*/
+                if(offers){
+                    var product = self.product
+                    var options = {}
+                    var apply_offer = self.apply_offer(offers, product);
+                    if (apply_offer){
+                        if(apply_offer == 'discount_on_products'){
+                            self.is_discounted_product = true;
+                            self.is_offer_product = true
+                            var discount_val = self.get_discount_val(product);
+                            if(discount_val){
+                                setTimeout(function(){
+                                    self.set_discount(discount_val);
+                                }, 250)
+                            }
+                        }
+                        else if (apply_offer == 'buy_x_get_y'){
+                            var can_apply_buy_x_get_y = order.can_apply_buy_x_get_y(apply_offer,order,product,options, self)
+                            if (can_apply_buy_x_get_y){
+                                if(!buffer){
+                                    if(previos_qty == 0){
+                                        order.remove_orderline(self.id);
+                                        order.add_buy_x_get_y(apply_offer,order,product,options,self);
+                                    }
+                                    else{
+                                        order.add_buy_x_get_y(apply_offer,order,product,options,self);
+                                    }
+                                }
+                                else{
+                                    let options = {}
+                                    order.add_buy_x_get_y(apply_offer,order,product,options,self);
+                                }
+                            }
+                        }
+                        else if (apply_offer == 'buy_x_get_y_qty'){
+                            var can_apply_buy_x_get_y_qty = order.can_apply_buy_x_get_y_qty(apply_offer,order,product,options, self)
+                            if (can_apply_buy_x_get_y_qty){
+                                if(!buffer){
+                                    if(previos_qty == 0){
+                                        order.remove_orderline(self.id);
+                                        order.add_buy_x_get_y_qty(apply_offer,order,product,options,self);
+                                    }
+                                    else{
+                                        order.add_buy_x_get_y_qty(apply_offer,order,product,options,self);
+                                    }
+                                }
+                                else{
+                                    let options = {}
+                                    order.add_buy_x_get_y_qty(apply_offer,order,product,options,self);
+                                }
+                            }
+                        }
+                        else if (apply_offer == 'buy_x_get_discount_on_y'){
+                            var can_apply_buy_x_get_discount_on_y = order.can_apply_buy_x_get_discount_on_y(apply_offer,order,product,options, self)
+                            if (can_apply_buy_x_get_discount_on_y){
+                                if(!buffer){
+                                    if(previos_qty == 0){
+                                        order.remove_orderline(self.id);
+                                        order.buy_x_get_discount_on_y(apply_offer,order,product,options,self);
+                                    }
+                                    else{
+                                        order.buy_x_get_discount_on_y(apply_offer,order,product,options,self);
+                                    }
+                                }
+                                else{
+                                    order.buy_x_get_discount_on_y(apply_offer,order,product,options,self);
+                                }
+                            }
+                            else{
+                                // Check if discount can be applied
+                                order.check_and_apply_discount_offer(apply_offer,order,product,options, self)
+                            }
+                            self.pos.gui.chrome.screens.products.order_widget.renderElement();
                         }
                     }
                 }
@@ -444,6 +519,11 @@ odoo.define('pos_promotional_discounts.models', function (require) {
                 _.each(all_promotions,function(promo_message){
                     if(client && promo_message.criteria_type == 'every_new_customer'){
                         if(client.pos_order_count == '0'){
+                            promo_messages_dict[promo_message.id] = promo_message;
+                        }
+                    }
+                    else if(client && promo_message.criteria_type == 'for_customer'){
+                        if($.inArray(client.id, promo_message.customer_ids) != -1){
                             promo_messages_dict[promo_message.id] = promo_message;
                         }
                     }
@@ -597,6 +677,11 @@ odoo.define('pos_promotional_discounts.models', function (require) {
                 _.each(all_promotions,function(promo_message){
                     if(client && promo_message.criteria_type == 'every_new_customer'){
                         if(client.pos_order_count == '0'){
+                            promo_messages_dict[promo_message.id] = promo_message;
+                        }
+                    }
+                    else if(client && promo_message.criteria_type == 'for_customer'){
+                        if($.inArray(client.id, promo_message.customer_ids) != -1){
                             promo_messages_dict[promo_message.id] = promo_message;
                         }
                     }

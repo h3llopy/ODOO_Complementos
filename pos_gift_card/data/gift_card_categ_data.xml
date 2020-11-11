@@ -9,53 +9,5 @@
             <field name="sequence">0</field>
             <field name="image_medium"  type="base64" file="pos_gift_card/static/description/gift_card.png"></field>
         </record>
-
-        <record id="mail_template_pos_order_voucher" model="mail.template">
-            <field name="name">POS Gift/Voucher Template</field>
-            <field name="model_id" ref="point_of_sale.model_pos_order"/>
-            <field name="subject">Coupon of Order(${object.name or 'n/a' })</field>
-            <field name="email_to">${object.partner_id.email|safe}</field>
-            <field name="partner_to">${object.partner_id.id}</field>
-            <field name="body_html"><![CDATA[
-                <p>
-                    Estimado ${object.partner_id.name},<br/>Reciba un cordial saludo.<br/>Adjunto sírvase encontrar su tarjeta Gift Card.
-                </p>
-
-                % for line in object.lines:
-                    <tr>
-<!--                        <td>${line.product_id.name}</td>-->
-<!--                        <td style="text-align:right">${line.get_history()}</td>-->
-                       <td style="text-align:right">
-                       % if line.get_history():
-                       &nbsp;&nbsp;Coupon Name: <b>${line.get_history().voucher_id.name}</b><br/>
-                       &nbsp;&nbsp;Voucher Validity: <b>${line.get_history().voucher_id.issue_date} to ${line.get_history().voucher_id.expiry_date}</b><br/>
-                       &nbsp;&nbsp;Secret Voucher Code: <b>${line.get_history().voucher_id.voucher_code}<br/></b>
-                       &nbsp;&nbsp;Voucher Value: <b>${line.get_history().voucher_id.voucher_value} ${line.get_history().voucher_id.voucher_val_type}</b><br/>
-                       % endif
-                       </td>
-                    </tr>
-                % endfor
-                <br/><b> Note: Keep your secret voucher code safe.</b>
-                <br/><br/><br/>
-                Saludos Cordiales,
-                ]]>
-            </field>
-<!--            <field name="report_template" ref="account.action_report_payment_receipt"/>-->
-            <field name="report_name">${(object.name or '').replace('/','-')}</field>
-<!--            <field name="lang">${object.partner_id.lang}</field>-->
-            <field name="auto_delete" eval="False"/>
-            <field name="user_signature" eval="False"/>
-        </record>
-
-<!--                        <td style="text-align:right">${line.price_unit}</td>-->
-<!--                        <td style="text-align:right">${line.discount}</td>-->
-<!--                        <td style="text-align:right">${line.price_subtotal_incl}</td>-->
-<!--            <field name="body_html" type="xml">-->
-<!--<div style="margin: 0px; padding: 0px;">VAlidity: from date to date-->
-<!--Coupon Value: $ 99999-->
-<!--Secret Voucher Code: SWERQWER4234-->
-
-<!--Note: Keep your secret voucher code safe</div>-->
-<!--</field>-->
     </data>
 </odoo>
