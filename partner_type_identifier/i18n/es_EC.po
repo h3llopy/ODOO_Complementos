@@ -1,0 +1,1040 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* xml_generation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-19 15:00+0000\n"
+"PO-Revision-Date: 2020-11-19 15:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: xml_generation
+#: code:addons/xml_generation/models/communication.py:484
+#, python-format
+msgid "***Start consultation of electronic document statuses.***"
+msgstr "***Iniciando consulta de los estados de documentos electrónicos.***"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__access_code
+msgid "Access Code"
+msgstr "Código de acceso"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_res_company__accounting_forced
+msgid "Accounting Forced"
+msgstr "Forzar Contabilidad"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_res_company__additional_info
+msgid "Additional Information"
+msgstr "Típo compania electrónica(Opcional)"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_res_company__address_altar
+#: model:ir.model.fields,field_description:xml_generation.field_res_company__address_altarnative
+msgid "Address Alternative"
+msgstr "Dirección Alternativa"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.pop_list_wizard_view
+msgid "Alert"
+msgstr "Alerta"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__auth_number
+msgid "Authorization Number"
+msgstr "Numero de Autorizacion"
+
+#. module: xml_generation
+#: selection:account.invoice,electronic_document_status:0
+#: selection:account.invoice,status:0
+#: selection:account.invoice,status_json:0
+msgid "Authorized"
+msgstr "Autorizado"
+
+#. module: xml_generation
+#. openerp-web
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:15
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:56
+#, python-format
+msgid "Barcode"
+msgstr "Código de barras"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice_tax__base_amount
+msgid "Base Amount"
+msgstr "Importe base"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.basic_auth_details_action
+#: model:ir.ui.menu,name:xml_generation.ba_menu
+#: model:ir.ui.menu,name:xml_generation.ba_root_menu
+msgid "Basic Auth"
+msgstr "Autorización Base"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.bill_type_details_action
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__bill_type
+#: model:ir.ui.menu,name:xml_generation.bill_type_details_menu
+msgid "Bill Type"
+msgstr "Tipo de Moneda"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type__bill_code
+msgid "Bill Type Code"
+msgstr "Codigo Tipo de Moneda"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type__bill_name
+msgid "Bill Type Name"
+msgstr "Nombre Tipo de Moneda"
+
+#. module: xml_generation
+#: model:ir.actions.server,name:xml_generation.ir_cron_web_service_invoice_credit_note_ir_actions_server
+#: model:ir.cron,cron_name:xml_generation.ir_cron_web_service_invoice_credit_note
+#: model:ir.cron,name:xml_generation.ir_cron_web_service_invoice_credit_note
+msgid "Call web service to send invoice and credit note"
+msgstr "Llamada WS para enviar Factura y NC"
+
+#. module: xml_generation
+#: model:ir.actions.server,name:xml_generation.ir_cron_web_service_json_ir_actions_server
+#: model:ir.cron,cron_name:xml_generation.ir_cron_web_service_json
+#: model:ir.cron,name:xml_generation.ir_cron_web_service_json
+msgid "Call web service to send json data"
+msgstr "Llamada WS para integración ERP"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.wizard_dati_iva_export_file
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__check_tax
+msgid "Check"
+msgstr "Confirmar"
+
+#. module: xml_generation
+#: code:addons/xml_generation/models/communication.py:488
+#, python-format
+msgid "Check the electronic document status of the invoice: %s"
+msgstr "Consultando el estado del documento electrónico de la factura: %s"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.wizard_dati_iva_export_file
+msgid "Click on <strong>Export</strong> to generate invoices data communication file."
+msgstr "Clic para <strong>Exportar</strong> facturas generadas"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood__code
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage__code
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__code
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code__code
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission__code
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment__code
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier__code
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__code
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__code
+msgid "Code"
+msgstr "Código"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.code_livelyhood_details_action
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__code_livelihood
+#: model:ir.ui.menu,name:xml_generation.code_livelyhood_details_menu
+msgid "Code Livelihood"
+msgstr "Codigo de Sustento"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.code_percentage_details_action
+#: model:ir.model.fields,field_description:xml_generation.field_account_tax__code_percent
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage__percentage
+#: model:ir.ui.menu,name:xml_generation.code_percentage_details_menu
+msgid "Code Percentage"
+msgstr "Codigo Porcentaje"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_res_company__commercial_name
+msgid "Commercial Name"
+msgstr "Nombre Comercial"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: xml_generation
+#: code:addons/xml_generation/models/communication.py:309
+#, python-format
+msgid "Config for retentions is empty. "
+msgstr ""
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_pop_list_content__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__create_uid
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__create_uid
+msgid "Created by"
+msgstr "Creado por:"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_pop_list_content__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__create_date
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__create_date
+msgid "Created on"
+msgstr "Creado"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__credit_ids
+msgid "Credit Note"
+msgstr "Nota de Credito"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__credit_note_count
+msgid "Credit Note Count"
+msgstr "Cuenta Nota de Credito"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__credit_note_seq_number
+#: model_terms:ir.ui.view,arch_db:xml_generation.account_invoice_inherited
+msgid "Credit Note Sequence Number"
+msgstr "Numero Secuencia Nota de Credito"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_order_inherited
+msgid "Credit Notes"
+msgstr "Facturas rectificativas"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__exp_date
+msgid "Date of Expiry"
+msgstr "Fecha de Caducidad"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_pop_list_content__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__display_name
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_config__document_type
+msgid "Document Type"
+msgstr "Tipo de Documento"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_config__document_type_id
+msgid "Document Type ID"
+msgstr "ID Tipo de Documento"
+
+#. module: xml_generation
+#: selection:account.invoice,status:0
+#: selection:account.invoice,status_json:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.parameters_integration_details_form
+msgid "Electronic Invoice Params"
+msgstr "Parámetros de factura Electrónica"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__electronic_document_status
+msgid "Electronic document status"
+msgstr "Estado del documento electrónico"
+
+#. module: xml_generation
+#. openerp-web
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:7
+#, python-format
+msgid "Email"
+msgstr "Correo Electronico"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__emission_code
+msgid "Emission"
+msgstr "Emision"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__end_date
+msgid "End date"
+msgstr "Fecha Final"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.wizard_dati_iva_export_file
+#: model_terms:ir.ui.view,arch_db:xml_generation.wizard_dati_iva_export_file_exit
+msgid "Export"
+msgstr "Exportar"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.wizard_dati_iva_export_file
+msgid "Export File"
+msgstr "Exportar Archivo"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_communication_export_file
+msgid "Export XML of invoices data communication"
+msgstr "Exportar XML de Facturas"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.action_wizard_dati_iva_export_file
+msgid "Export invoices data file"
+msgstr "Exportar Archivos de Facturas"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__file_export
+msgid "File"
+msgstr "Archivo"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__name
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__filename
+msgid "Filename"
+msgstr "Nombre de archivo"
+
+#. module: xml_generation
+#: selection:account.invoice,electronic_document_status:0
+msgid "Generated"
+msgstr "Generado"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__host
+msgid "Host"
+msgstr ""
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth__id
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type__id
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood__id
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage__id
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__id
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__id
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__id
+#: model:ir.model.fields,field_description:xml_generation.field_pop_list_content__id
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code__id
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission__id
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment__id
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier__id
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__id
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__id
+msgid "ID"
+msgstr "Identificador"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_config_inherited
+msgid "ID Type of Document"
+msgstr "ID Tipo de Documento"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_res_partner__identifier_type
+#: model:ir.model.fields,field_description:xml_generation.field_res_users__identifier_type
+msgid "Identifier Type"
+msgstr "Tipo de Identificador"
+
+#. module: xml_generation
+#. openerp-web
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:19
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:65
+#, python-format
+msgid "Identifier type"
+msgstr "Tipo de Identificador"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__integrated
+msgid "Integrated"
+msgstr "Integrado"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__invoice_count
+msgid "Invoice Count"
+msgstr "Cuenta Factura"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de factura"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__invoice_seq_number
+#: model_terms:ir.ui.view,arch_db:xml_generation.account_invoice_inherited
+msgid "Invoice Sequence Number"
+msgstr "Numero Secuencia de Factura"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_account_invoice_tax
+msgid "Invoice Tax"
+msgstr "Impuesto de factura"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__invoice_ids
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_order_inherited
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__response_log_json
+#: model_terms:ir.ui.view,arch_db:xml_generation.invoice_line_inherited
+msgid "Json Response Log"
+msgstr "Bitacora de Respuesta Integración ERP"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__status_json
+msgid "Json Status"
+msgstr "Estado Integración ERP"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_pop_list_content____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher____last_update
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence____last_update
+msgid "Last Modified on"
+msgstr "Fecha de modificación"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_pop_list_content__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__write_uid
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__write_uid
+msgid "Last Updated by"
+msgstr "Ultima Actualización por"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_bill_type__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_code_percentage__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_communication_export_file__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_pop_list_content__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__write_date
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: xml_generation
+#: selection:res.company,additional_info:0
+msgid "Microenterprise Regime Taxpayer"
+msgstr "Contribuyente Régimen Microempresas"
+
+#. module: xml_generation
+#. openerp-web
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:61
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:70
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:79
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:88
+#, python-format
+msgid "N/A"
+msgstr ""
+
+#. module: xml_generation
+#: selection:account.journal,ret_fte:0
+#: selection:account.journal,ret_iva:0
+#: selection:res.company,accounting_forced:0
+msgid "NO"
+msgstr "No"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_code_livelyhood__name
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice_line__net_price
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order_line__net_price
+msgid "Net Price"
+msgstr ""
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice_line__net_price_with_discount
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order_line__net_price_with_discount
+msgid "Net Price With Discount"
+msgstr ""
+
+#. module: xml_generation
+#: selection:account.invoice,integrated:0
+msgid "No"
+msgstr ""
+
+#. module: xml_generation
+#: code:addons/xml_generation/wizard/export_file.py:20
+#, python-format
+msgid "No communication selected"
+msgstr ""
+
+#. module: xml_generation
+#. openerp-web
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:21
+#, python-format
+msgid "None"
+msgstr ""
+
+#. module: xml_generation
+#: selection:account.invoice,electronic_document_status:0
+msgid "Not Received"
+msgstr "No Recibido"
+
+#. module: xml_generation
+#: code:addons/xml_generation/models/pos.py:260
+#, python-format
+msgid "Número de documento mal configurado. "
+msgstr ""
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.pop_list_wizard_view
+msgid "OK"
+msgstr "Ok"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__organization
+msgid "Organization"
+msgstr "Organización"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.parameters_integration_details_action
+#: model:ir.ui.menu,name:xml_generation.pi_menu
+#: model:ir.ui.menu,name:xml_generation.pi_root_menu
+#: model_terms:ir.ui.view,arch_db:xml_generation.parameters_integration_details_form
+msgid "Parameters Integration"
+msgstr "Parametros de Integración"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth__password
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__password
+msgid "Password"
+msgstr "Contraseña"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_journal__payment_method_id_ws
+msgid "Payment ID"
+msgstr "ID de Pago"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.payment_method_electronic_details_action
+#: model:ir.ui.menu,name:xml_generation.payment_method_electronic_details_menu
+msgid "Payment Method Electronic"
+msgstr "Metodo Electrónico de Pago"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__payment_method
+msgid "Payment Methods"
+msgstr "Metodo de Pago"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_journal__payment_method_electronic
+msgid "Payment Methods Electronic"
+msgstr "Metodo de Pago Electronico"
+
+#. module: xml_generation
+#. openerp-web
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:11
+#, python-format
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__point_emission
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_config_inherited
+msgid "Point Emission"
+msgstr "Punto de Emisión"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__point_of_emission
+#: model:ir.model.fields,field_description:xml_generation.field_pos_config__point_emission
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__point_of_emission
+msgid "Point Of emission"
+msgstr "Punto de Emisión"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Configuración del TPV"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "Líneas de Orden de Punto de Venta"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Pedidos del TPV"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pop_list_content__popup_list_content
+msgid "Pop Up"
+msgstr "Ventana"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__pos_id
+#: model:ir.model.fields,field_description:xml_generation.field_pos_config__sequence_invoice_id
+msgid "Pos ID"
+msgstr "ID Punto de Venta"
+
+#. module: xml_generation
+#. openerp-web
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:38
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:83
+#, python-format
+msgid "Pricelist"
+msgstr "Lista de Precios"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_product_product__product_id_ws
+#: model:ir.model.fields,field_description:xml_generation.field_product_template__product_id_ws
+msgid "Product ID(WS)"
+msgstr "ID Producto Integración"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: xml_generation
+#: selection:account.invoice,electronic_document_status:0
+msgid "Received"
+msgstr "Recibido"
+
+#. module: xml_generation
+#: selection:account.invoice,status:0
+#: selection:account.invoice,status_json:0
+msgid "Refund"
+msgstr "Reembolso"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__response_log
+#: model_terms:ir.ui.view,arch_db:xml_generation.bills_invoice_line_inherited
+#: model_terms:ir.ui.view,arch_db:xml_generation.invoice_line_inherited
+msgid "Response Log"
+msgstr "Bitacora"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_journal__ret_fte
+msgid "Ret Fte"
+msgstr "Retencion en la Fuente"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_journal__ret_iva
+msgid "Ret IVA"
+msgstr "Retencion de IVA"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__check_retention
+msgid "Retention"
+msgstr "Retencion"
+
+#. module: xml_generation
+#: selection:account.journal,ret_fte:0
+#: selection:account.journal,ret_iva:0
+#: selection:res.company,accounting_forced:0
+msgid "SI"
+msgstr "Si"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.account_invoice_inehrit_view
+msgid "Send JSON Data"
+msgstr "Integrar ERP"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.account_invoice_inehrit_view
+#: model_terms:ir.ui.view,arch_db:xml_generation.vendor_bills_inherited
+msgid "Send XML Data"
+msgstr "Integrar Factura Electronica"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_withholding_sequence__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__sequence_document
+msgid "Sequence Document"
+msgstr "Secuencia Documento"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_config_inherited
+msgid "Sequences Invoices"
+msgstr ""
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__serie_no
+msgid "Serie No"
+msgstr ""
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_config__serie_no
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__serie_no
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_config_inherited
+msgid "Series"
+msgstr ""
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_res_company__special_contirbutor
+msgid "Special Contributor"
+msgstr "Contribuyente Especial"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_payment_method_electronic__start_date
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: xml_generation
+#: code:addons/xml_generation/models/communication.py:401
+#: code:addons/xml_generation/models/communication.py:416
+#: code:addons/xml_generation/models/communication.py:454
+#: code:addons/xml_generation/models/communication.py:470
+#: code:addons/xml_generation/models/communication.py:573
+#: code:addons/xml_generation/models/communication.py:591
+#: code:addons/xml_generation/models/communication.py:647
+#: code:addons/xml_generation/models/communication.py:665
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__status
+#, python-format
+msgid "Status"
+msgstr "Estado"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__store_id
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__store_id
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_config_inherited
+msgid "Store ID"
+msgstr "Identificador Tienda"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_config__store_id
+msgid "Store Id"
+msgstr "Identificador Tienda"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__store_id
+msgid "Store_ID"
+msgstr ""
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice_line__tax_amount
+msgid "Tax Amount"
+msgstr "Importe impuesto"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.tax_code_details_action
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice_line__tax_code
+#: model:ir.model.fields,field_description:xml_generation.field_account_tax__tax_code
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order_line__tax_code
+#: model:ir.ui.menu,name:xml_generation.tax_code_details_menu
+msgid "Tax Code"
+msgstr "Codigo de Impuesto"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_tax_code__name
+msgid "Tax Code Name"
+msgstr "Nombre Codigo Impuesto"
+
+#. module: xml_generation
+#. openerp-web
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:32
+#: code:addons/xml_generation/static/src/xml/pos_template_view.xml:74
+#, python-format
+msgid "Tax ID"
+msgstr "Identificador Impuesto"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_tax__tax_id_ws
+msgid "Tax ID(WS)"
+msgstr "Identificador Impuesto Integracion ERP"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice_line__tax_rate_code
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order_line__tax_rate_code
+msgid "Tax Rate Code"
+msgstr "Codigo Porcentaje Impuesto"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_tax__tax_rate_code
+msgid "Tax rate code"
+msgstr "Codigo Porcentaje Impuesto"
+
+#. module: xml_generation
+#: selection:account.invoice,electronic_document_status:0
+msgid "To be processed"
+msgstr "Por Procesar"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.bills_invoice_line_inherited
+#: model_terms:ir.ui.view,arch_db:xml_generation.invoice_line_inherited
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_order_line_inherited_12
+msgid "Total"
+msgstr "Total"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__type_environment
+msgid "Type Environment"
+msgstr "Tipo de Ambiente"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.pos_config_inherited
+msgid "Type of Document"
+msgstr "Tipo de Documento"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.type_emission_details_action
+#: model:ir.model.fields,field_description:xml_generation.field_type_emission__name
+#: model:ir.ui.menu,name:xml_generation.type_emission_details_menu
+msgid "Type of Emission"
+msgstr "Tipo de Emisión"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.type_environment_details_action
+#: model:ir.ui.menu,name:xml_generation.type_environment_details_menu
+msgid "Type of Environment"
+msgstr "Tipo de Ambiente"
+
+#. module: xml_generation
+#: model:ir.ui.menu,name:xml_generation.type_identifier_details_menu
+msgid "Type of Identifier"
+msgstr "Tipo de Identificador"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.type_identifier_details_action
+msgid "Type of Identify"
+msgstr "Tipo de Identidad"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.type_voucher_details_action
+#: model:ir.model.fields,field_description:xml_generation.field_type_voucher__name
+#: model:ir.ui.menu,name:xml_generation.type_voucher_details_menu
+msgid "Type of Voucher"
+msgstr "Tipo de Recibo"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_pos_order__type_of_environment
+#: model:ir.model.fields,field_description:xml_generation.field_res_company__environment_type
+#: model:ir.model.fields,field_description:xml_generation.field_type_environment__name
+msgid "Type of environment"
+msgstr "Tipo de Ambiente"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_type_identifier__name
+msgid "Type of identifier"
+msgstr "Tipo de Identificador"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__url
+msgid "URL"
+msgstr "URL"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__url_ei
+msgid "URL Electronic Invoice"
+msgstr "URL Facturación Electrónica"
+
+#. module: xml_generation
+#: selection:account.invoice,electronic_document_status:0
+msgid "Unauthorized"
+msgstr "No Autorizado"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_parameters_integration__user
+msgid "User"
+msgstr "Usuario"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_basic_auth__user
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice_tax__vat_base_tax
+#: model:ir.model.fields,field_description:xml_generation.field_account_tax__vat_base_tax
+msgid "Vat Base Tax"
+msgstr "Base Impuesto IVA"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__voucher
+msgid "Voucher Code"
+msgstr ""
+
+#. module: xml_generation
+#: model:ir.ui.menu,name:xml_generation.account_withholding_menu
+msgid "Withholding"
+msgstr "Retención"
+
+#. module: xml_generation
+#: model:ir.actions.act_window,name:xml_generation.withholding_sequence_details_action
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__with_seq
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__with_seq_number
+#: model:ir.ui.menu,name:xml_generation.withholding_sequence_details_menu
+msgid "Withholding Sequence"
+msgstr "Secuencia Retencion"
+
+#. module: xml_generation
+#: selection:account.invoice,integrated:0
+msgid "Yes"
+msgstr "Si"
+
+#. module: xml_generation
+#: code:addons/xml_generation/wizard/export_file.py:24
+#, python-format
+msgid "You can only export one communication"
+msgstr "Usted puede solo exportar una comunicación"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_basic_auth
+msgid "basic.auth"
+msgstr "Autorizacion basica"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_bill_type
+msgid "bill.type"
+msgstr "Tipo Moneda"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_code_livelyhood
+msgid "code.livelyhood"
+msgstr "Codigo Sustento"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_code_percentage
+msgid "code.percentage"
+msgstr "Codigo Porcentaje"
+
+#. module: xml_generation
+#: model_terms:ir.ui.view,arch_db:xml_generation.wizard_dati_iva_export_file
+msgid "or"
+msgstr "o"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_parameters_integration
+msgid "parameters.integration"
+msgstr "Parametros Integracion"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_payment_method_electronic
+msgid "payment.method.electronic"
+msgstr "Metodo de Pago Electronico"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_pop_list_content
+msgid "pop.list.content"
+msgstr "Pop"
+
+#. module: xml_generation
+#: model:ir.model.fields,field_description:xml_generation.field_account_invoice__serie
+msgid "series"
+msgstr "Serie"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_tax_code
+msgid "tax.code"
+msgstr "Codigo Impuesto"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_type_emission
+msgid "type.emission"
+msgstr "Tipo Emisión"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_type_environment
+msgid "type.environment"
+msgstr "Tipo Ambiente"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_type_identifier
+msgid "type.identifier"
+msgstr "Tipo Identificador"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_type_voucher
+msgid "type.voucher"
+msgstr "Tipo Recibo"
+
+#. module: xml_generation
+#: model:ir.model,name:xml_generation.model_withholding_sequence
+msgid "withholding.sequence"
+msgstr "Secuencia Retencion"
+

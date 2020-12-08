@@ -42,6 +42,16 @@ Este repositorio contiene modulos complementarios referentes a la localizacion d
 
 **Descripción:**
 
+- partner_type_identifier     
+
+**Descripción:**
+Asignación del tipo de identificador en el tercero indicando si es cedula es porque tiene 10 caracteres y si es ruc  es porque tiene 13 caracteres.
+
+- odoo_multi_channel_sale y  shopify_odoo_bridge 
+
+**Descripción:**
+Inclusión de la importación del campo Company en shopify hacia el campo RUC/Cedula (VAT) en odoo.
+
 
   ## Dependencias entre modulos
   - pos_coupons y wk_coupons   
