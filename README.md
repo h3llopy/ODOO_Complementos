@@ -8,43 +8,48 @@ Este repositorio contiene modulos complementarios referentes a la localizacion d
 
 - niq_pos_multi_barcodes       
 
-**Descripción:**
+**Descripción:** Módulo comprado y modificado. Contiene la funcionalidad de la lectura de multi codigos de barras en el punto de venta y en las pantallas asociadas a inventarios en el back. Ademas se realizó la modificación de la impresión de la etiqueta del producto para que incluya el código de barras.
 
 - purchase_inventory_extend    
 
-**Descripción:**
+**Descripción:** Módulo desarrollado. Contiene la funcionalidad para que en la recepción del inventario de compras permita leer el codigo de barras para hacer más agil su ingreso
 
 - pos_gift_card
 
-**Descripción:**
+**Descripción:** Módulo comprado y modificado. Permite el manejo de tarjetas Gift Card que serán redimidas en el consumo posterior del cliente que lo posea. Funciona con el POS
 
 - pos_coupons                  
 
-**Descripción:**
+**Descripción:** Módulo comprado. Permite el manejo de cupones de descuento en la venta del POS
 
 - wk_coupons                   
 
-**Descripción:**
+**Descripción:** Módulo comprado. Relacionado a la funcionalidad de pos_coupons
 
 - pos_promotional_discounts
 
-**Descripción:**
-
-- rest_api                     
-
-**Descripción:**
+**Descripción:** Módulo comprado. Permite el manejo de promociones y descuentos en el POS. basados en filtro de clientes, productos, categorias y fechas.
 
 - pos_partial_payment
 
-**Descripción:**
+**Descripción:** Módulo comprado. Permite la gestión de facturas de crédito en el POS.
 
 - receive_purchase_barcode     
 
-**Descripción:**
+**Descripción:** Módulo desarrollado. Permite cargar un valor al producto en el POS en base a un porcentaje ingresado por el usuario. Aplica para cargo de Tarjetas de Credito en el POS.
+
+- withholding_in_pos     
+
+**Descripción:** Módulo que permite solicitar los datos de la retención en el POS
+
+- pos_lot_credit_card, 
+
+**Descripción:** Módulo que permite tomar los datos del lote y banco en el pos. 
 
 
   ## Dependencias entre modulos
   - pos_coupons y wk_coupons   
+  - niq_pos_multi_barcodes y purchase_inventory_extend
 
 ## Autores ✒️
 
