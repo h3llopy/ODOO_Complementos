@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2015-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!--"License URL :<https://store.webkul.com/license.html/>" -->
+<odoo>
+	<data>
+		<record id="shopify_instance_view_form" model="ir.ui.view">
+			<field name="name">multi.channel.sale.from</field>
+			<field name="model">multi.channel.sale</field>
+			<field name="inherit_id" ref="odoo_multi_channel_sale.multi_channel_view_form"/>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<group name="credentials" position='inside'>
+					<label for="shopify_url" attrs="{'invisible':[('channel','!=','shopify')]}"/>
+					<b><field name="shopify_url" placeholder="http://example.com" attrs="{'readonly':[('state','=','validate')],'required':[('channel','=','shopify')],'invisible':[('channel','!=','shopify')]}"/></b>
+					<label for="shopify_apikey" attrs="{'invisible':[('channel','!=','shopify')]}"/>
+					<b><field name="shopify_apikey" placeholder="API Key" attrs="{'readonly':[('state','=','validate')],'required':[('channel','=','shopify')],'invisible':[('channel','!=','shopify')]}"/></b>
+					<label for="shopify_password" attrs="{'invisible':[('channel','!=','shopify')]}"/>
+					<b><field name="shopify_password" password='True' placeholder="API Password" attrs="{'readonly':[('state','=','validate')],'required':[('channel','=','shopify')],'invisible':[('channel','!=','shopify')]}"/></b>
+				</group>
+				<xpath expr="//group[@name='import_buttons']" position="before">
+					<group attrs="{'invisible':[('channel','!=','shopify')]}">
+						<button
+							aria-label="Import"
+							title     ="Import"
+							help      ="Open wizard to import record."
+							type      ="action"
+							name      ="%(shopify_odoo_bridge.open_import_wizard_action)d"
+							class     ="oe_highlight wk_operation_btn box"
+							icon      ="fa-6x fa-sitemap"
+							style     ="height:120px;width:100%;"
+						><br/>
+							<span>Import</span>
+							<span>
+								<i class="fa fa-fw fa-cloud-download"/>
+							</span>
+						</button>
+						<button
+							aria-label="Export"
+							title     ="Export"
+							help      ="Open wizard to export record."
+							type      ="action"
+							name      ="%(shopify_odoo_bridge.open_export_wizard_action)d"
+							class     ="oe_highlight wk_operation_btn box"
+							icon      ="fa-6x fa-sitemap"
+							style     ="height:120px;width:100%;"
+						><br/>
+							<span>Export</span>
+							<span>
+								<i class="fa fa-fw fa-cloud-download"/>
+							</span>
+						</button>
+					</group>
+				</xpath>
+				<xpath expr="//group[@name='state_configuration']" position="attributes">
+					<attribute name="attrs">{'invisible':[('channel','=','shopify')]}</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="shopify_instance_view_kanban" model="ir.ui.view">
+			<field name="name">multi.channel.sale.kanban</field>
+			<field name="model">multi.channel.sale</field>
+			<field name="inherit_id" ref="odoo_multi_channel_sale.multi_channel_view_kanban"/>
+			<field name="arch" type="xml">
+				<xpath expr="//div[hasclass('o_kanban_card_content')]" position="inside">
+					<div class="o_kanban_primary_left" >
+						<div class="o_primary">
+							<center>
+								<span>
+									<t t-field="record.name.value"/>
+								</span>
+							</center>
+						</div>
+						<div t-if="record.channel.value == 'Shopify'" style="color:rgb(162, 70, 137)">
+							<center>
+								<img
+									src="/shopify_odoo_bridge/static/src/img/dashboard.svg"
+									alt="shopify_logo"
+									style="margin-left: 180px;"
+								/>
+								<h3>
+									<t t-esc="record.name.value"/>
+								</h3>
+							</center>
+						</div>
+					</div>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>
