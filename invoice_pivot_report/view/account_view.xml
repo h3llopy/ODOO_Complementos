@@ -5,24 +5,24 @@
         <field name="name">account.invoice.line.pivot</field>
         <field name="model">account.invoice.line</field>
         <field name="arch" type="xml">
-            <pivot string="Invoice" display_quantity="true">
+            <pivot>
 <!--                <field name="partner_id" type="measure"/>-->
                 <field name="vat" type="measure"/>
 <!--                <field name="vat" type="row"/>-->
                 <field name="number" type="measure"/>
-                <field name="number" type="row"/>
+               <!--<field name="number" type="row"/>-->
 <!--                <field name="invoice_id" type="measure"/>-->
                 <field name="product_id" type="measure"/>
 <!--                <field name="product_id" type="row"/>-->
                 <field name="quantity" type="measure"/>
-                <field name="price_subtotal" type="measure"/>
+                <field name="price_subtotal_signed" type="measure"/>
                 <field name="price_tax_amount" type="measure"/>
                 <field name="tax_code" type="measure"/>
                 <field name="tax_rate_code" type="measure"/>
                 <field name="invoice_line_tax_ids" type="measure"/>
 <!--                <field name="tax_rate_code" type="row"/>-->
                 <field name="tax_amount" type="measure"/>
-                <field name="price_total" type="measure"/>
+                <field name="price_total_signed" type="measure"/>
                 <field name="cost" type="measure"/>
                 <field name="margin" type="measure"/>
             </pivot>
@@ -35,7 +35,7 @@
         <field name="res_model">account.invoice.line</field>
         <field name="view_type">form</field>
         <field name="view_mode">pivot,form</field>
-        <field name="domain">[('invoice_type', '=', 'out_invoice')]</field>
+        <field name="domain">[('invoice_type','in',('out_invoice', 'out_refund'))]</field>
     </record>
     <record id="action_pivot_purchse_invoice_view" model="ir.actions.act_window">
         <field name="name">Purchase Invoice View</field>
@@ -48,10 +48,10 @@
 
     <menuitem id="pivot_views" name="Pivot Views"
               parent="account.menu_finance_reports"/>
-    <menuitem id="sale_invoice_pivot" name="Sale Inoice View"
+    <menuitem id="sale_invoice_pivot" name="Sale Invoice View"
               action="invoice_pivot_report.action_pivot_sale_invoice_view"
               parent="pivot_views"/>
-    <menuitem id="purchase_invoice_pivot" name="Purchase Inoice View"
+    <menuitem id="purchase_invoice_pivot" name="Purchase Invoice View"
               action="invoice_pivot_report.action_pivot_purchse_invoice_view"
               parent="pivot_views"/>
     </data>
