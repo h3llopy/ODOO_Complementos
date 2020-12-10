@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* invoice_pivot_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-10 02:25+0000\n"
+"PO-Revision-Date: 2020-12-10 02:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_pivot_report
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__price_total_signed
+msgid "Amount (with Taxes)"
+msgstr "Total (con impuestos)"
+
+#. module: invoice_pivot_report
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__price_subtotal_signed
+msgid "Amount (without Taxes)"
+msgstr "Total (sin impuestos)"
+
+#. module: invoice_pivot_report
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__cost
+msgid "Cost"
+msgstr "Costo"
+
+#. module: invoice_pivot_report
+#: model:ir.model,name:invoice_pivot_report.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Linea de Factura"
+
+#. module: invoice_pivot_report
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__number
+msgid "Invoice Number"
+msgstr ""
+
+#. module: invoice_pivot_report
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__margin
+msgid "Margin"
+msgstr "Margen"
+
+#. module: invoice_pivot_report
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__vat
+msgid "NIF Provider"
+msgstr ""
+
+#. module: invoice_pivot_report
+#: model:ir.ui.menu,name:invoice_pivot_report.pivot_views
+msgid "Pivot Views"
+msgstr ""
+
+#. module: invoice_pivot_report
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__product_name
+msgid "Product Name"
+msgstr "Producto"
+
+#. module: invoice_pivot_report
+#: model:ir.actions.act_window,name:invoice_pivot_report.action_pivot_purchse_invoice_view
+#: model:ir.ui.menu,name:invoice_pivot_report.purchase_invoice_pivot
+msgid "Purchase Invoice View"
+msgstr ""
+
+#. module: invoice_pivot_report
+#: model:ir.actions.act_window,name:invoice_pivot_report.action_pivot_sale_invoice_view
+#: model:ir.ui.menu,name:invoice_pivot_report.sale_invoice_pivot
+msgid "Sale Invoice View"
+msgstr ""
+
+#. module: invoice_pivot_report
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__price_tax_amount
+#: model:ir.model.fields,field_description:invoice_pivot_report.field_account_invoice_line__tax_amount
+msgid "Tax Amount"
+msgstr "Importe impuesto"
+
