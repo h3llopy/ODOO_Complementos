@@ -61,6 +61,8 @@ Inclusión de la importación del campo Company en shopify hacia el campo RUC/Ce
   - pos_coupons y wk_coupons   
   - niq_pos_multi_barcodes y purchase_inventory_extend
 
+**Prueba Jenkins**
+
 ## Autores ✒️
 
 * **Nombre Desarrollador** - # Ticket - Descripcion Ticket
